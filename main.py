@@ -23,6 +23,7 @@ def printer():
             elif x < (len(word) - 1):
                 print("_", end=" ")
         elif hide[x] == 1:
+            print(i, end=" ")
             if x == (len(word) - 1):
                 print(i)
             if x < (len(word) - 1):
@@ -57,7 +58,6 @@ def input_controll():
 
 def win():
     pass
-
 def main():
     setup()
     while True:
