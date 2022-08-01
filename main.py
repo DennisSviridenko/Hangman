@@ -4,7 +4,7 @@ words = ["Hallo", "moin", "lol", "jo", "z"]
 show = []
 hidden = []
 hide = []
-versuche = 0
+versuche = 12345666876876876876
 
 
 def setup(word):
