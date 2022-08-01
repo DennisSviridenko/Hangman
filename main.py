@@ -8,7 +8,7 @@ hide = []
 
 def setup():
     global word
-    versuche = 12345666876876876876
+    word = random.choice(words)
     for i in word:
         hidden.append(i)
         hide.append(0)
