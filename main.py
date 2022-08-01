@@ -3,41 +3,6 @@ import random
 words = ["Hallo", "moin", "lol", "jo", "z"]
 hidden = []
 hide = []
-<<<<<<< Updated upstream
-versuche = 0
-
-
-
-def setup():
-    x = random.choice(words)
-    for i in x:
-        hidden.append(i)
-        hide.append(0)
-
-def main():
-    setup()
-    print(hidden)
-    print(hide)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 
 
 def setup():
@@ -101,7 +66,6 @@ def main():
         if versuche == 0: 
             print("Du hast verloren!!!")
             break
->>>>>>> Stashed changes
 
 
 
