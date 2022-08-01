@@ -7,17 +7,31 @@ hide = []
 versuche = 0
 
 
-
-def setup():
-    x = random.choice(words)
-    for i in x:
+def setup(word):
+    word = random.choice(words)
+    for i in word:
         hidden.append(i)
         hide.append(0)
 
+def printer():
+    x = 0
+    for i in hidden:
+        if hide[x] == 0:
+            # if x == word.length():
+            print("_", end=" ")
+        elif hide[x] == 1:
+            print(i, end=" ")
+
+
+
+
+
+
+
 def main():
     setup()
-    print(hidden)
-    print(hide)
+    print(print(word))
+    print(len(word))
 
 
 
