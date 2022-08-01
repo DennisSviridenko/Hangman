@@ -5,12 +5,14 @@ hidden = []
 hide = []
 
 
+
 def setup():
     global word
-    word = random.choice(words)
+    versuche = 12345666876876876876
     for i in word:
         hidden.append(i)
         hide.append(0)
+
 
 def printer():
     x = 0
@@ -56,7 +58,6 @@ def input_controll():
 def win():
     pass
 
-
 def main():
     setup()
     while True:
@@ -66,9 +67,6 @@ def main():
         if versuche == 0: 
             print("Du hast verloren!!!")
             break
-
-
-
 
 
 if __name__ == '__main__':
