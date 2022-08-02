@@ -23,17 +23,14 @@ def printer():
             elif x < (len(word) - 1):
                 print("_", end=" ")
         elif hide[x] == 1:
-            print(i, end=" ")
             if x == (len(word) - 1):
                 print(i)
-            if x < (len(word) - 1):
+            elif x < (len(word) - 1):
                 print(i, end=" ")
         
         x += 1
 
-def input_controll():
-    global versuche
-    versuche = 6876876876876876876
+def input_controll(versuche):
     x = input(">>> ")
     z = 0
     if len(x) > 1:
@@ -47,27 +44,39 @@ def input_controll():
             for i in hidden:
                 if i == x:
                     hide[z] = 1
-                    break
-            
+
                 z += 1
         else:
             versuche -= 1
             print("Leider Falsch, noch ", versuche, " Versuche!!!")            
 
+    z = 0
+    for i in hide:
+        if i == 1:
+            z += 1
+        
+        if z == len(word):
+            win()
+    
+    main(versuche)
+
 
 
 def win():
-    pass
-def main():
-    setup()
-    while True:
-        printer()
-        input_controll()
-    
-        if versuche == 0: 
-            print("Du hast verloren!!!")
-            break
+    print(f"Du hast Gewonnen das Lösungswort war {word}")
+    exit()
+
+
+def main(vrsuche):
+    if vrsuche <= 0: 
+        print(f"Du hast verloren, das Lösungswort war {word}")
+        exit()
+    printer()
+    input_controll(vrsuche)
+        
 
 
 if __name__ == '__main__':
-    main()
+    versuche = 8
+    setup()
+    main(versuche)
